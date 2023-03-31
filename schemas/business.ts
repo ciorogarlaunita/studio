@@ -92,6 +92,39 @@ const business = defineType({
 			],
 			description: "The photos of the business",
 		}),
+
+		// Price range from low to high
+		defineField({
+			name: "prices",
+			title: "Prices",
+			type: "string",
+			options: {
+				list: [
+					{title: "$", value: "$"},
+					{title: "$$", value: "$$"},
+					{title: "$$$", value: "$$$"},
+					{title: "$$$$", value: "$$$$"},
+				],
+				layout: "radio",
+			},
+			description: "The price range of the business",
+		}),
+
+		defineField({
+			name: "pricesLink",
+			title: "Prices link",
+			type: "url",
+			description: "The link to the prices page",
+		}),
+
+		defineField({
+			name: "isSponsor",
+			title: "Is sponsor",
+			type: "boolean",
+			description: "Is the business a sponsor of Ciorogarla Unita",
+			initialValue: false,
+			validation: (Rule) => Rule.required(),
+		}),
 		
 		defineField({
 			name: "location",
