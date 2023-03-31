@@ -94,33 +94,26 @@ const business = defineType({
 		}),
 		
 		defineField({
-			name: "locations",
-			title: "Locations",
-			description: "The locations of the business",
-			type: "array",
-			of: [
-				{ 
-					name: "location",
-					title: "Location",
-					type: "object",
-					fields: [
-						defineField({
-							name: "address",
-							title: "Address",
-							type: "string",
-							description: "A human readable address",
-							validation: (Rule) => Rule.required(),
-						}),
-						defineField({
-							name: "coordinates",
-							title: "Coordinates",
-							type: "geopoint",
-							description: "The coordinates of the location",
-							validation: (Rule) => Rule.required(),
-						}),
-					],
-				}
-			],
+			name: "location",
+			title: "Location",
+			description: "The location of the business",
+			type: "object",
+			fields: [
+					defineField({
+						name: "address",
+						title: "Address",
+						type: "string",
+						description: "A human readable address",
+						validation: (Rule) => Rule.required(),
+					}),
+					defineField({
+						name: "coordinates",
+						title: "Coordinates",
+						type: "geopoint",
+						description: "The coordinates of the location",
+						validation: (Rule) => Rule.required(),
+					}),
+			]
 			// Can be online
 			// validation: (Rule) => Rule.required(),
 		}),
