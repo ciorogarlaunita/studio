@@ -1,3 +1,7 @@
+const {theme} = (await import(
+	// @ts-expect-error -- TODO setup themer.d.ts to get correct typings
+	'https://themer.sanity.build/api/hues?default=5c9199&primary=1cb485;400&transparent=5c9199&positive=43d675;300&caution=fbd024;200&lightest=fcfdfd&darkest=0d1415'
+	)) as {theme: import('sanity').StudioTheme}
 import { defineConfig } from "sanity"
 import { deskTool } from "sanity/desk"
 import { visionTool } from "@sanity/vision"
@@ -16,6 +20,8 @@ export default defineConfig({
 		visionTool(),
 		unsplashImageAsset()
 	],
+
+	theme,
 
 	schema: {
 		types: schemaTypes,
