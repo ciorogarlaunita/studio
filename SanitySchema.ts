@@ -340,13 +340,6 @@ export interface User extends SanityDocument {
   displayName?: string;
 
   /**
-   * Email — `string`
-   *
-   *
-   */
-  email?: string;
-
-  /**
    * Photo URL — `url`
    *
    *

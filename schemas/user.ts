@@ -12,12 +12,6 @@ export default defineType({
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
-			name: "email",
-			title: "Email",
-			type: "string",
-			validation: (Rule) => Rule.required().email(),
-		}),
-		defineField({
 			name: "photoURL",
 			title: "Photo URL",
 			type: "url",
