@@ -324,4 +324,34 @@ export interface VolunteeringProject extends SanityDocument {
   };
 }
 
-export type Documents = Business | Organisation | VolunteeringProject;
+/**
+ * User
+ *
+ *
+ */
+export interface User extends SanityDocument {
+  _type: "user";
+
+  /**
+   * Display Name — `string`
+   *
+   *
+   */
+  displayName?: string;
+
+  /**
+   * Email — `string`
+   *
+   *
+   */
+  email?: string;
+
+  /**
+   * Photo URL — `url`
+   *
+   *
+   */
+  photoURL?: string;
+}
+
+export type Documents = Business | Organisation | VolunteeringProject | User;
