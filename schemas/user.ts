@@ -23,5 +23,11 @@ export default defineType({
 			type: "url",
 			validation: (UrlRule) => UrlRule.required(),
 		}),
+		defineField({
+			name: "uid",
+			title: "UID",
+			type: "string",
+			validation: (Rule) => Rule.required(),
+		}),
 	],
 });

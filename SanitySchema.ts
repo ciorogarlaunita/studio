@@ -352,6 +352,13 @@ export interface User extends SanityDocument {
    *
    */
   photoURL?: string;
+
+  /**
+   * UID — `string`
+   *
+   *
+   */
+  uid?: string;
 }
 
 export type Documents = Business | Organisation | VolunteeringProject | User;
