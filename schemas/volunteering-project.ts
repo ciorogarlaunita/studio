@@ -25,9 +25,9 @@ export default defineType({
 			to: [{ type: "organisation" }],
 		}),
 		defineField({
-			name: "logo",
-			title: "Logo",
-			description: "The logo of the project",
+			name: "image",
+			title: "Image",
+			description: "An image for the project",
 			type: "image",
 		}),
 		defineField({

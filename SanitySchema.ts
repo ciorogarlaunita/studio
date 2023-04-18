@@ -269,11 +269,11 @@ export interface VolunteeringProject extends SanityDocument {
   organisation?: SanityReference<Organisation>;
 
   /**
-   * Logo — `image`
+   * Image — `image`
    *
-   * The logo of the project
+   * An image for the project
    */
-  logo?: {
+  image?: {
     _type: "image";
     asset: SanityReference<SanityImageAsset>;
     crop?: SanityImageCrop;
