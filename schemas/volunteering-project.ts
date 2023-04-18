@@ -18,6 +18,12 @@ export default defineType({
 			type: "text",
 		}),
 		defineField({
+			name: "topic",
+			title: "Topic",
+			description: "The topic of the project",
+			type: "string",
+		}),
+		defineField({
 			name: "organisation",
 			title: "Organisation",
 			description: "The organisation that the project belongs to",
@@ -46,7 +52,8 @@ export default defineType({
 			name: "country",
 			title: "Country",
 			description: "The country where the project takes place",
-			type: "string",
+			type: "reference",
+			to: [{ type: "country" }],
 		}),
 		defineField({
 			name: "period",
