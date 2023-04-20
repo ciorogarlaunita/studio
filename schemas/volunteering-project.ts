@@ -52,6 +52,13 @@ export default defineType({
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
+			name: "address",
+			title: "Address",
+			description: "The address of the project",
+			type: "string",
+			validation: (Rule) => Rule.required(),
+		}),
+		defineField({
 			name: "location",
 			title: "Location",
 			description: "The location of the project",
