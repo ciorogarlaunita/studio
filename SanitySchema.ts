@@ -312,16 +312,9 @@ export interface VolunteeringProject extends SanityDocument {
   };
 
   /**
-   * Address — `string`
-   *
-   * The address of the project
-   */
-  address?: string;
-
-  /**
    * Location — `object`
    *
-   * The location of the business
+   * The location of the project
    */
   location?: {
     _type: "location";
