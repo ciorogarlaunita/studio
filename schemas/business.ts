@@ -9,6 +9,8 @@ const businessTypes = [
 	{title: "Barbershop", value: "barbershop"},
 	{title: "ITP", value: "itp"},
 	{title: "Showroom", value: "showroom"},
+	{title: "Distributor", value: "distributor"},
+	{title: "Auto Parts", value: "autoParts"},
 	// {title: "Bakery", value: "bakery"},
 	{title: "Market", value: "market"},
 	{title: "Pizza", value: "pizza"},
