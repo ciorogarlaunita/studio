@@ -61,9 +61,26 @@ export default defineType({
 		defineField({
 			name: "location",
 			title: "Location",
-			description: "The location of the project",
-			type: "geopoint",
-			validation: (Rule) => Rule.required(),
+			description: "The location of the business",
+			type: "object",
+			fields: [
+					defineField({
+						name: "address",
+						title: "Address",
+						type: "string",
+						description: "A human readable address",
+						validation: (Rule) => Rule.required(),
+					}),
+					defineField({
+						name: "coordinates",
+						title: "Coordinates",
+						type: "geopoint",
+						description: "The coordinates of the location",
+						validation: (Rule) => Rule.required(),
+					}),
+			]
+			// Can be online
+			// validation: (Rule) => Rule.required(),
 		}),
 		defineField({
 			name: "infopack",

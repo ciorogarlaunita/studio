@@ -319,11 +319,26 @@ export interface VolunteeringProject extends SanityDocument {
   address?: string;
 
   /**
-   * Location — `geopoint`
+   * Location — `object`
    *
-   * The location of the project
+   * The location of the business
    */
-  location?: SanityGeoPoint;
+  location?: {
+    _type: "location";
+    /**
+     * Address — `string`
+     *
+     * A human readable address
+     */
+    address?: string;
+
+    /**
+     * Coordinates — `geopoint`
+     *
+     * The coordinates of the location
+     */
+    coordinates?: SanityGeoPoint;
+  };
 
   /**
    * Infopack — `file`
