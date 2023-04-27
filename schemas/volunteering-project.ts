@@ -1,5 +1,10 @@
 import { defineType, defineField } from "sanity";
 
+const projectTypes = [
+	{title: "ERASMUS+", value: "erasmus"},
+	{title: "ESC", value: "esc"},
+];
+
 export default defineType({
 	name: "volunteeringProject",
 	title: "Volunteering Project",
@@ -36,6 +41,16 @@ export default defineType({
 			type: "string",
 			validation: (Rule) => Rule.required(),
 		}),
+		defineField({
+			name: "type",
+			title: "Type",
+			description: "Type of project",
+			type: "string",
+			options: {
+				list: projectTypes,
+			},
+			validation: (Rule) => Rule.required(),
+		})
 		defineField({
 			name: "organisation",
 			title: "Organisation",
