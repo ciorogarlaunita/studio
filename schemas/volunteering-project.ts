@@ -50,7 +50,7 @@ export default defineType({
 				list: projectTypes,
 			},
 			validation: (Rule) => Rule.required(),
-		})
+		}),
 		defineField({
 			name: "organisation",
 			title: "Organisation",
@@ -109,6 +109,14 @@ export default defineType({
 			description: "The country where the project takes place",
 			type: "reference",
 			to: [{ type: "country" }],
+			validation: (Rule) => Rule.required(),
+		}),
+		defineField({
+			name: "participatingCountries",
+			title: "Participating Countries",
+			description: "The countries that participate in the project",
+			type: "array",
+			of: [{ type: "reference", to: [{ type: "country" }] }],
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
