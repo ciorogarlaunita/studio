@@ -52,6 +52,12 @@ export default defineType({
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
+			name: "applicationForm",
+			title: "Application Form",
+			description: "The application form of the project",
+			type: "url",
+		}),
+		defineField({
 			name: "organisation",
 			title: "Organisation",
 			description: "The organisation that the project belongs to",
