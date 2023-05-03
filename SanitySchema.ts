@@ -247,6 +247,28 @@ export interface Organisation extends SanityDocument {
     crop?: SanityImageCrop;
     hotspot?: SanityImageHotspot;
   };
+
+  /**
+   * Contact — `object`
+   *
+   * The contact of the organisation
+   */
+  contact?: {
+    _type: "contact";
+    /**
+     * Phone — `string`
+     *
+     * The phone number of the contact
+     */
+    phone?: string;
+
+    /**
+     * Email — `string`
+     *
+     * The email of the contact
+     */
+    email?: string;
+  };
 }
 
 /**
