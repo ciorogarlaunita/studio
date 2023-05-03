@@ -23,7 +23,6 @@ export default defineType({
 			title: "Description",
 			description: "The description of the project",
 			type: "text",
-			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
 			name: "slug",
@@ -79,7 +78,12 @@ export default defineType({
 			title: "Infopack",
 			description: "The infopack of the project",
 			type: "file",
-			validation: (Rule) => Rule.required(),
+		}),
+		defineField({
+			name: "infoLink",
+			title: "Info Link",
+			description: "The link to the info of the project",
+			type: "url",
 		}),
 		defineField({
 			name: "country",

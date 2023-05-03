@@ -407,6 +407,13 @@ export interface VolunteeringProject extends SanityDocument {
   infopack?: { _type: "file"; asset: SanityReference<any> };
 
   /**
+   * Info Link — `url`
+   *
+   * The link to the info of the project
+   */
+  infoLink?: string;
+
+  /**
    * Country — `reference`
    *
    * The country where the project takes place
