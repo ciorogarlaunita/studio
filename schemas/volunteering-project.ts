@@ -35,6 +35,12 @@ export default defineType({
 			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
+			name: "deadline",
+			title: "Deadline",
+			description: "The deadline of the project",
+			type: "date",
+		}),
+		defineField({
 			name: "topic",
 			title: "Topic",
 			description: "The topic of the project",
