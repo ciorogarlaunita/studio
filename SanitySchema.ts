@@ -144,7 +144,7 @@ export interface Business extends SanityDocument {
   /**
    * Location — `object`
    *
-   * The location of the business
+   * The location
    */
   location?: {
     _type: "location";
@@ -251,23 +251,44 @@ export interface Organisation extends SanityDocument {
   /**
    * Contact — `object`
    *
-   * The contact of the organisation
+   * The contact information of the business
    */
   contact?: {
     _type: "contact";
     /**
      * Phone — `string`
      *
-     * The phone number of the contact
+     * The phone number of the business
      */
     phone?: string;
 
     /**
      * Email — `string`
      *
-     * The email of the contact
+     * The email address of the business
      */
     email?: string;
+
+    /**
+     * Website — `url`
+     *
+     * The website of the business
+     */
+    website?: string;
+
+    /**
+     * Facebook — `url`
+     *
+     * The Facebook page of the business
+     */
+    facebook?: string;
+
+    /**
+     * Instagram — `url`
+     *
+     * The Instagram page of the business
+     */
+    instagram?: string;
   };
 }
 
@@ -359,7 +380,7 @@ export interface VolunteeringProject extends SanityDocument {
   /**
    * Location — `object`
    *
-   * The location of the project
+   * The location
    */
   location?: {
     _type: "location";

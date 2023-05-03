@@ -1,4 +1,5 @@
 import { defineType, defineField } from "sanity";
+import {locationField} from "./templates";
 
 const projectTypes = [
 	{title: "ERASMUS+", value: "erasmus"},
@@ -72,36 +73,7 @@ export default defineType({
 			type: "image",
 			validation: (Rule) => Rule.required(),
 		}),
-		defineField({
-			name: "location",
-			title: "Location",
-			description: "The location of the project",
-			type: "object",
-			fields: [
-				defineField({
-					name: "address",
-					title: "Address",
-					type: "string",
-					description: "A human readable address",
-					validation: (Rule) => Rule.required(),
-				}),
-				defineField({
-					name: "plus",
-					title: "Plus code",
-					type: "string",
-					description: "The plus code of location",
-					validation: (Rule) => Rule.required(),
-				}),
-				defineField({
-					name: "locationStreetview",
-					title: "Street View location",
-					type: "string",
-					description: "Location Street View",
-					validation: (Rule) => Rule.required(),
-				}),
-			],
-			validation: (Rule) => Rule.required(),
-		}),
+		locationField,
 		defineField({
 			name: "infopack",
 			title: "Infopack",
