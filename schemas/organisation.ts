@@ -23,5 +23,26 @@ export default defineType({
 			description: "The logo of the organisation",
 			type: "image",
 		}),
+		defineField({
+			name: "contact",
+			title: "Contact",
+			description: "The contact of the organisation",
+			type: "object",
+			fields: [
+				defineField({
+					name: "phone",
+					title: "Phone",
+					description: "The phone number of the contact",
+					type: "string",
+				}),
+				defineField({
+					name: "email",
+					title: "Email",
+					description: "The email of the contact",
+					type: "string",
+				}),
+			],
+			validation: (Rule) => Rule.required(),
+		})
 	],
 })
