@@ -36,32 +36,32 @@ export const locationField = defineField({
 export const contactField = defineField({
 	name: "contact",
 	title: "Contact",
-	description: "The contact information of the business",
+	description: "The contact information",
 	type: "object",
 	fields: [
 		{
 			name: "phone",
 			title: "Phone",
 			type: "string",
-			description: "The phone number of the business",
+			description: "The phone number",
 		},
 		{
 			name: "email",
 			title: "Email",
 			type: "string",
-			description: "The email address of the business",
+			description: "The email address",
 		},
 		{
 			name: "website",
 			title: "Website",
 			type: "url",
-			description: "The website of the business",
+			description: "The website",
 		},
 		{
 			name: "facebook",
 			title: "Facebook",
 			type: "url",
-			description: "The Facebook page of the business",
+			description: "The Facebook page",
 			validation: (Rule) => Rule.custom((value: String | undefined) => {
 				if (!value) return true;
 
@@ -74,7 +74,7 @@ export const contactField = defineField({
 			name: "instagram",
 			title: "Instagram",
 			type: "url",
-			description: "The Instagram page of the business",
+			description: "The Instagram page",
 			validation: (Rule) => Rule.custom((value: String | undefined) => {
 				if (!value) return true;
 

@@ -13,12 +13,6 @@ export default defineType({
 			type: "string",
 		}),
 		defineField({
-			name: "link",
-			title: "Link",
-			description: "The link to the organisation",
-			type: "url",
-		}),
-		defineField({
 			name: "logo",
 			title: "Logo",
 			description: "The logo of the organisation",

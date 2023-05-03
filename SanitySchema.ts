@@ -173,42 +173,42 @@ export interface Business extends SanityDocument {
   /**
    * Contact — `object`
    *
-   * The contact information of the business
+   * The contact information
    */
   contact?: {
     _type: "contact";
     /**
      * Phone — `string`
      *
-     * The phone number of the business
+     * The phone number
      */
     phone?: string;
 
     /**
      * Email — `string`
      *
-     * The email address of the business
+     * The email address
      */
     email?: string;
 
     /**
      * Website — `url`
      *
-     * The website of the business
+     * The website
      */
     website?: string;
 
     /**
      * Facebook — `url`
      *
-     * The Facebook page of the business
+     * The Facebook page
      */
     facebook?: string;
 
     /**
      * Instagram — `url`
      *
-     * The Instagram page of the business
+     * The Instagram page
      */
     instagram?: string;
   };
@@ -230,13 +230,6 @@ export interface Organisation extends SanityDocument {
   name?: string;
 
   /**
-   * Link — `url`
-   *
-   * The link to the organisation
-   */
-  link?: string;
-
-  /**
    * Logo — `image`
    *
    * The logo of the organisation
@@ -251,42 +244,42 @@ export interface Organisation extends SanityDocument {
   /**
    * Contact — `object`
    *
-   * The contact information of the business
+   * The contact information
    */
   contact?: {
     _type: "contact";
     /**
      * Phone — `string`
      *
-     * The phone number of the business
+     * The phone number
      */
     phone?: string;
 
     /**
      * Email — `string`
      *
-     * The email address of the business
+     * The email address
      */
     email?: string;
 
     /**
      * Website — `url`
      *
-     * The website of the business
+     * The website
      */
     website?: string;
 
     /**
      * Facebook — `url`
      *
-     * The Facebook page of the business
+     * The Facebook page
      */
     facebook?: string;
 
     /**
      * Instagram — `url`
      *
-     * The Instagram page of the business
+     * The Instagram page
      */
     instagram?: string;
   };
