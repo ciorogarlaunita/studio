@@ -2,6 +2,7 @@ import { defineConfig } from "sanity"
 import { deskTool } from "sanity/desk"
 import { visionTool } from "@sanity/vision"
 import { unsplashImageAsset } from "sanity-plugin-asset-source-unsplash";
+import { markdownSchema } from "sanity-plugin-markdown";
 import { schemaTypes } from "./schemas"
 
 export default defineConfig({
@@ -14,7 +15,8 @@ export default defineConfig({
 	plugins: [
 		deskTool(),
 		visionTool(),
-		unsplashImageAsset()
+		unsplashImageAsset(),
+		markdownSchema(),
 	],
 
 	schema: {
