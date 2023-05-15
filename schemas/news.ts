@@ -16,6 +16,10 @@ export default defineType({
 			title: "Slug",
 			description: "The slug of the news article",
 			type: "slug",
+			options: {
+				source: "title",
+				maxLength: 96,
+			},
 		}),
 		defineField({
 			name: "urgent",
