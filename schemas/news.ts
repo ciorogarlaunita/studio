@@ -10,6 +10,7 @@ export default defineType({
 			title: "Title",
 			description: "The title of the news article",
 			type: "string",
+			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
 			name: "slug",
@@ -20,18 +21,31 @@ export default defineType({
 				source: "title",
 				maxLength: 96,
 			},
+			validation: (Rule) => Rule.required(),
+		}),
+		defineField({
+			name: "tags",
+			title: "Tags",
+			description: "The tags of the news article",
+			type: "array",
+			of: [{ type: "string" }],
+			options: {
+				layout: "tags",
+			},
 		}),
 		defineField({
 			name: "urgent",
 			title: "Urgent",
 			description: "Is this news article urgent?",
 			type: "boolean",
+			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
 			name: "content",
 			title: "Content",
 			description: "The content of the news article",
-			type: "markdown"
+			type: "markdown",
+			validation: (Rule) => Rule.required(),
 		}),
 	],
 })

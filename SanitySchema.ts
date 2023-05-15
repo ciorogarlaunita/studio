@@ -480,6 +480,13 @@ export interface News extends SanityDocument {
   slug?: { _type: "slug"; current: string };
 
   /**
+   * Tags — `array`
+   *
+   * The tags of the news article
+   */
+  tags?: Array<SanityKeyed<string>>;
+
+  /**
    * Urgent — `boolean`
    *
    * Is this news article urgent?
