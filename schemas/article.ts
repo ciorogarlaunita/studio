@@ -42,7 +42,6 @@ export default defineType({
 				hotspot: true,
 
 			},
-			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
 			name: "urgent",
