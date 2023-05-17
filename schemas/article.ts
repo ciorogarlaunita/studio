@@ -1,8 +1,8 @@
 import { defineType, defineField } from "sanity";
 
 export default defineType({
-	name: "news",
-	title: "News",
+	name: "article",
+	title: "Article",
 	type: "document",
 	fields: [
 		defineField({
@@ -32,6 +32,17 @@ export default defineType({
 			options: {
 				layout: "tags",
 			},
+		}),
+		defineField({
+			name: "cover",
+			title: "Cover",
+			description: "The cover of the news article",
+			type: "image",
+			options: {
+				hotspot: true,
+
+			},
+			validation: (Rule) => Rule.required(),
 		}),
 		defineField({
 			name: "urgent",
