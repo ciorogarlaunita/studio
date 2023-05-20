@@ -1,3 +1,4 @@
+import {CaseIcon} from "@sanity/icons";
 import { defineType, defineField } from "sanity";
 import { contactField, locationField } from "./templates";
 
@@ -22,6 +23,7 @@ const business = defineType({
 	name: "business",
 	title: "Business",
 	type: "document",
+	icon: CaseIcon,
 
 	fields: [
 		defineField({

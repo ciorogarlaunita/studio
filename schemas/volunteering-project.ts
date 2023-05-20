@@ -1,15 +1,17 @@
+import {CalendarIcon} from "@sanity/icons";
 import { defineType, defineField } from "sanity";
 import {locationField} from "./templates";
 
 const projectTypes = [
-	{title: "ERASMUS+", value: "erasmus"},
-	{title: "ESC", value: "esc"},
+	{title: "Youth Exchange", value: "ye"},
 ];
 
 export default defineType({
 	name: "volunteeringProject",
 	title: "Volunteering Project",
 	type: "document",
+	icon: CalendarIcon,
+
 	fields: [
 		defineField({
 			name: "name",

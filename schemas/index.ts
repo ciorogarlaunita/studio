@@ -6,10 +6,10 @@ import article from "./article";
 
 export const schemaTypes = [
 	business,
-	organisation,
-	country,
 	volunteeringProject,
 	article,
+	country,
+	organisation,
 ];
 
 export default schemaTypes;
