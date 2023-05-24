@@ -16,7 +16,7 @@ const businessTypes = [
 	// {title: "Bakery", value: "bakery"},
 	{title: "Market", value: "market"},
 	{title: "Pizza", value: "pizza"},
-	// {title: "Mini Mart", value: "miniMart"},
+	{title: "Hotel", value: "hotel"},
 ];
 
 const business = defineType({
